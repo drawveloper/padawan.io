@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
 
-class HomePage extends Component {
-  static propTypes = {
+const HomePage =  React.createClass({
+  propTypes: {
     actions: PropTypes.object.isRequired,
     home: PropTypes.object.isRequired
-  };
+  },
 
   render() {
     return (
@@ -19,7 +19,7 @@ class HomePage extends Component {
       </div>
     )
   }
-}
+})
 
 function mapStateToProps(state) {
   return {
