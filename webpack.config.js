@@ -50,13 +50,13 @@ const getEntry = function (env) {
 
 const getLoaders = function (env) {
   const loaders = [{ test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel', 'eslint'] },
-                   { test: /\.(jpe?g|png|gif|svg)$/i, loaders: ['file']}]
+                   { test: /\.(jpe?g|png|gif|svg)$/i, loaders: ['file?name=[name].[ext]']}]
 
   if (env === productionEnvironment ) {
     // generate separate physical stylesheet for production build using ExtractTextPlugin. This provides separate caching and avoids a flash of unstyled content on load.
-    loaders.push({test: /(\.css|\.scss)$/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')})
+    loaders.push({test: /(\.css|\.scss|\.sass)$/, loader: ExtractTextPlugin.extract('css?sourceMap!resolve-url!sass?sourceMap')})
   } else {
-    loaders.push({test: /(\.css|\.scss)$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']})
+    loaders.push({test: /(\.css|\.scss|\.sass)$/, loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap']})
   }
 
   return loaders

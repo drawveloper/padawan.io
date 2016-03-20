@@ -4,11 +4,17 @@ import { Link, IndexLink } from 'react-router'
 const Header = React.createClass({
   render() {
     return (
-      <div>
-        <IndexLink to="/">Início</IndexLink>
-        <span className="separator"> | </span>
-        <Link to="/About">Sobre</Link>
-      </div>
+      <nav className="navbar">
+        <p className="navbar-item">
+          <IndexLink className="title" to="/">Padawan.io</IndexLink>
+        </p>
+        <p className="navbar-item">
+          <Link to="/estudantes">Estudantes</Link>
+        </p>
+        <p className="navbar-item">
+          <Link to="/mentores">Mentores</Link>
+        </p>
+      </nav>
     )
   }
 })

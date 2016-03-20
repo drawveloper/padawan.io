@@ -1,3 +1,5 @@
+@import "~reset-css/reset";
+
 /* Variables */
 $vin-blue: #5bb7db;
 $vin-green: #60b044;
@@ -9,27 +11,93 @@ $light-purple: #ad95f2;
 $purple-grey: #39324D;
 $deep-red: #C22557;
 $bright-pink: #ED5887;
+$dark-blue: #002f4b;
 
-/* Styles */
-body {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html, body {
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.4em;
   color: $light-grey;
   background-color: $dark-grey;
-  min-width: 230px;
-  max-width: 550px;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  font-weight: 300;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   color: $light-purple;
   text-decoration: none;
+
+  &:hover {
+    color: lighten($light-purple, 10%);
+  }
 }
 
 td {
 	padding: 12px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: darken($dark-grey, 5%);
+  margin-bottom: 0 !important;
+
+  a {
+    font-weight: bold;
+  }
+
+  .title {
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .navbar-item {
+    padding: 0 10px;
+  }
+}
+
+.intro {
+  .elevator-pitch {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .pitch {
+    text-align: center;
+    text-shadow: 3px 4px 5px $dark-grey;
+  }
+  h1 {
+    font-size: 6em;
+    color: $light-grey;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  .bg-developers{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background:
+      linear-gradient(
+        to bottom right,
+        fade-out($dark-blue, 0.2),
+        fade-out($dark-purple, 0.2)
+      ),
+      url('./img/developers.jpg') center center no-repeat;
+    background-size: cover;
+  }
 }
