@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
+import Header from '../components/Header'
+import Intro from '../components/Intro'
 
 class HomePage extends Component {
   static propTypes = {
@@ -11,7 +13,10 @@ class HomePage extends Component {
 
   render() {
     return (
-      <h1>Olá, mundo!</h1>
+      <div>
+        <Header/>
+        <Intro/>
+      </div>
     )
   }
 }
