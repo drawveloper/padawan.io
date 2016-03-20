@@ -61,6 +61,10 @@ h2 {
 
   .navbar-item {
     padding: 0 10px;
+
+    &:first-child {
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -109,6 +113,31 @@ h2 {
   padding: 50px;
   font-size: 1.3em;
   input {
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 0;
+  }
+  button {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: $vin-blue;
+    color: $light-grey;
+    font-size: 1em;
+    border: 0;
+  }
+}
+
+.how-it-works {
+  background-color: $dark-purple;
+  display: flex;
+  display: none;
+  .left {
+    padding: 40px;
+    width: 50%;
+  }
+  .right {
+    width: 50%;
   }
 }

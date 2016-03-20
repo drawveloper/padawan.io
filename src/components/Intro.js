@@ -19,6 +19,13 @@ const Intro = React.createClass({
           <div className="left">
             <h2>Atinja seus objetivos</h2>
             <p>Estude com um mentor do <strong>Padawan.io</strong> e tire todas as suas dúvidas sobre:</p>
+            <ul>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>React</li>
+              <li>Flux</li>
+              <li>Express</li>
+            </ul>
           </div>
           <div className="right"></div>
         </div>
