@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link, IndexLink } from 'react-router'
 
-const Header = () => {
+const Header = React.createClass({
+  render() {
     return (
       <div>
         <IndexLink to="/">Início</IndexLink>
@@ -9,6 +10,7 @@ const Header = () => {
         <Link to="/About">Sobre</Link>
       </div>
     )
-}
+  }
+})
 
 export default Header

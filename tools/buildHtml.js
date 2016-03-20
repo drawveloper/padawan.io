@@ -8,7 +8,7 @@
 /*eslint-disable no-console */
 
 import fs from 'fs'
-import colors from 'colors'
+import colors from 'colors' //eslint-disable-line no-unused-vars
 import cheerio from 'cheerio'
 
 const useTrackJs = true // If you choose not to use TrackJS, just set this to false and the build warning will go away.
