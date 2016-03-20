@@ -11,11 +11,16 @@ const Intro = React.createClass({
           </div>
         </div>
         <div className="sign-up">
-          <form>
-            <h3>Comece agora</h3>
-            <input name="email" placeholder="Seu email"/>
-            <button className="button is-primary">Começar</button>
-          </form>
+          <h3>Comece agora</h3>
+          <input name="email" placeholder="Seu email"/>
+          <button className="button is-primary">Começar</button>
+        </div>
+        <div className="how-it-works">
+          <div className="left">
+            <h2>Atinja seus objetivos</h2>
+            <p>Estude com um mentor do <strong>Padawan.io</strong> e tire todas as suas dúvidas sobre:</p>
+          </div>
+          <div className="right"></div>
         </div>
       </div>
     )
