@@ -4,6 +4,7 @@
 import webpack from 'webpack'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 const developmentEnvironment = 'development'
 const productionEnvironment = 'production'
@@ -22,6 +23,7 @@ const getPlugins = function (env) {
 
   switch (env) {
     case productionEnvironment:
+      plugins.push(new CopyWebpackPlugin([{from: 'src/img', to: 'img'}]))
       plugins.push(new ExtractTextPlugin('styles.css'))
       plugins.push(new webpack.optimize.DedupePlugin())
       plugins.push(new webpack.optimize.UglifyJsPlugin())
