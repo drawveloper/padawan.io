@@ -51,7 +51,7 @@
     "eslint-plugin-react": "4.2.3",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
-    "gh-pages-deploy": "0.4.1",
+    "gh-pages-deploy": "0.4.2",
     "mocha": "2.4.5",
     "node-sass": "3.4.2",
     "npm-run-all": "1.6.0",
