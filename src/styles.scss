@@ -20,6 +20,7 @@ $dark-blue: #002f4b;
 }
 
 html, body {
+  height: 100%;
   font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $light-grey;
   margin: 0 auto;
@@ -30,8 +31,8 @@ html, body {
   background:
     linear-gradient(
       to bottom right,
-      fade-out($dark-blue, 0.2),
-      fade-out($dark-purple, 0.2)
+      fade-out($dark-blue, 0.1),
+      fade-out($dark-purple, 0.3)
     );
 }
 
