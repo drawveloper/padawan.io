@@ -6,14 +6,16 @@ const Header = React.createClass({
     return (
       <nav className="navbar">
         <p className="navbar-item">
-          <IndexLink className="title" to="/">Padawan.io</IndexLink>
+          <IndexLink className="title" to="/"><img src="img/logo-title.png" alt="Padawan.io"/></IndexLink>
         </p>
-        <p className="navbar-item">
-          <Link to="/estudantes">Estudantes</Link>
-        </p>
-        <p className="navbar-item">
-          <Link to="/mentores">Mentores</Link>
-        </p>
+        <div className="navbar-right">
+          <p className="navbar-item">
+            <Link to="/estudantes">Estudantes</Link>
+          </p>
+          <p className="navbar-item">
+            <Link to="/mentores">Mentores</Link>
+          </p>
+        </div>
       </nav>
     )
   }

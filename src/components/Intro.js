@@ -6,8 +6,11 @@ const Intro = React.createClass({
       <div className="intro">
         <div className="elevator-pitch bg-developers">
           <div className="pitch">
-            <h1>Aprenda mais rápido</h1>
-            <p>Mentoria 1-a-1 com especialistas em desenvolvimento de software</p>
+            <h1>Aprenda JavaScript</h1>
+            <p>Torne-se um desenvolvedor profissional.</p>
+            <br/>
+            <p>Estude exatamente o que você precisa</p>
+            <p>guiado por um mentor focado no seu sucesso.</p>
           </div>
         </div>
         <div className="sign-up">

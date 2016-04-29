@@ -22,16 +22,21 @@ $dark-blue: #002f4b;
 html, body {
   font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: $light-grey;
-  background-color: $dark-grey;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  background:
+    linear-gradient(
+      to bottom right,
+      fade-out($dark-blue, 0.2),
+      fade-out($dark-purple, 0.2)
+    );
 }
 
 a {
-  color: $light-purple;
+  color: white;
   text-decoration: none;
 
   &:hover {
@@ -51,26 +56,30 @@ h2 {
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  background-color: darken($dark-grey, 5%);
   margin-bottom: 0;
   z-index: 2;
 
   a {
     font-weight: bold;
   }
+  
+  .navbar-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 
   .navbar-item {
     padding: 0 10px;
 
-    &:first-child {
-      text-transform: uppercase;
+    .title img {
+      max-height: 40px;
     }
   }
 }
 
 .intro {
   .elevator-pitch {
-    box-shadow: inset 0 5px 5px -4px black;
     min-height: 430px;
     display: flex;
     flex-direction: column;
@@ -95,13 +104,6 @@ h2 {
     width: 100%;
     height: 100%;
     position: relative;
-    background:
-      linear-gradient(
-        to bottom right,
-        fade-out($dark-blue, 0.2),
-        fade-out($dark-purple, 0.2)
-      ),
-      url('./img/developers.jpg') center center no-repeat;
     background-size: cover;
   }
 }
