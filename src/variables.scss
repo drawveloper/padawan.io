@@ -1,0 +1,35 @@
+// Variables
+$vin-blue: #5bb7db;
+$vin-green: #60b044;
+$vin-red: #f00;
+$dark-grey: #303133;
+$light-grey: #efefef;
+$dark-purple: #504375;
+$light-purple: #ad95f2;
+$purple-grey: #39324d;
+$deep-red: #c22557;
+$bright-pink: #ed5887;
+$dark-blue: #002f4b;
+$white: #fff;
+
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+
+@mixin small {
+  @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}

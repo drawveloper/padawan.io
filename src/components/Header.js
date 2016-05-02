@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, IndexLink } from 'react-router'
+import './Header.scss'
 
 const Header = React.createClass({
   render() {

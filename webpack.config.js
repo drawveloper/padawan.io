@@ -5,6 +5,7 @@ import webpack from 'webpack'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
+import autoprefixer from 'autoprefixer'
 
 const developmentEnvironment = 'development'
 const productionEnvironment = 'production'
@@ -56,9 +57,9 @@ const getLoaders = function (env) {
 
   if (env === productionEnvironment ) {
     // generate separate physical stylesheet for production build using ExtractTextPlugin. This provides separate caching and avoids a flash of unstyled content on load.
-    loaders.push({test: /(\.css|\.scss|\.sass)$/, loader: ExtractTextPlugin.extract('css?sourceMap!resolve-url!sass?sourceMap')})
+    loaders.push({test: /(\.css|\.scss|\.sass)$/, loader: ExtractTextPlugin.extract('css?sourceMap!postcss!resolve-url!sass?sourceMap')})
   } else {
-    loaders.push({test: /(\.css|\.scss|\.sass)$/, loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap']})
+    loaders.push({test: /(\.css|\.scss|\.sass)$/, loaders: ['style', 'css', 'postcss', 'resolve-url', 'sass?sourceMap']})
   }
 
   return loaders
@@ -79,7 +80,11 @@ function getConfig(env) {
     plugins: getPlugins(env),
     module: {
       loaders: getLoaders(env)
-    }
+    },
+    resolve: {
+      extensions: ['', '.webpack.js', '.web.js', '.js', '.scss']
+    },
+    postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
   }
 }
 

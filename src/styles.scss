@@ -1,17 +1,5 @@
-@import "~reset-css/reset";
-
-/* Variables */
-$vin-blue: #5bb7db;
-$vin-green: #60b044;
-$vin-red: #ff0000;
-$dark-grey: #303133;
-$light-grey: #efefef;
-$dark-purple: #504375;
-$light-purple: #ad95f2;
-$purple-grey: #39324D;
-$deep-red: #C22557;
-$bright-pink: #ED5887;
-$dark-blue: #002f4b;
+@import '~reset-css/reset';
+@import 'variables';
 
 *,
 *::after,
@@ -19,25 +7,29 @@ $dark-blue: #002f4b;
   box-sizing: border-box;
 }
 
-html, body {
+html, 
+body,
+#app {
   height: 100%;
-  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom right,
+    fade-out($dark-blue, .1),
+    fade-out($dark-purple, .3)
+  );
   color: $light-grey;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
+  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-smoothing: antialiased;
+  margin: 0 auto;
   text-rendering: optimizeLegibility;
-  background:
-    linear-gradient(
-      to bottom right,
-      fade-out($dark-blue, 0.1),
-      fade-out($dark-purple, 0.3)
-    );
 }
 
 a {
-  color: white;
+  color: $white;
   text-decoration: none;
 
   &:hover {
@@ -51,96 +43,4 @@ h1 {
 
 h2 {
   font-size: 2.5em;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  margin-bottom: 0;
-  z-index: 2;
-
-  a {
-    font-weight: bold;
-  }
-  
-  .navbar-right {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .navbar-item {
-    padding: 0 10px;
-
-    .title img {
-      max-height: 40px;
-    }
-  }
-}
-
-.intro {
-  .elevator-pitch {
-    min-height: 430px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-  .pitch {
-    text-align: center;
-    text-shadow: 3px 4px 5px $dark-grey;
-  }
-  h1 {
-    font-size: 5em;
-    color: $light-grey;
-    margin-bottom: 20px;
-  }
-  p {
-    font-size: 1.3em;
-  }
-  .bg-developers{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-size: cover;
-  }
-}
-
-.sign-up {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  font-size: 1.3em;
-  input {
-    margin: 0 15px;
-    font-size: 1em;
-    padding: 5px 10px;
-    border-radius: 3px;
-    border: 0;
-  }
-  button {
-    padding: 5px 10px;
-    border-radius: 3px;
-    background-color: $vin-blue;
-    color: $light-grey;
-    font-size: 1em;
-    border: 0;
-  }
-}
-
-.how-it-works {
-  background-color: $dark-purple;
-  display: flex;
-  display: none;
-  .left {
-    padding: 40px;
-    width: 50%;
-  }
-  .right {
-    width: 50%;
-  }
 }

@@ -30,6 +30,7 @@
     "reset-css": "2.0.2011012603"
   },
   "devDependencies": {
+    "autoprefixer": "6.3.6",
     "babel-cli": "6.6.5",
     "babel-core": "6.7.7",
     "babel-eslint": "5.0.0",
@@ -56,6 +57,7 @@
     "mocha": "2.4.5",
     "node-sass": "3.4.2",
     "npm-run-all": "1.6.0",
+    "postcss-loader": "0.9.1",
     "react-transform-catch-errors": "1.0.2",
     "react-transform-hmr": "1.0.4",
     "redbox-react": "1.2.2",

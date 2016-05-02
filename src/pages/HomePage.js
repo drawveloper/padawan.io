@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
+import './HomePage.scss'
 
 const HomePage =  React.createClass({
   propTypes: {

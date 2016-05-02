@@ -1,4 +1,5 @@
 import React from 'react'
+import './Intro.scss'
 
 const Intro = React.createClass({
   render() {
