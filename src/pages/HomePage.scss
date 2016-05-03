@@ -13,4 +13,7 @@
   @include xsmall {
     background-size: auto 500px;
   }
+  @include large {
+    background-size: auto 100vh;
+  }
 }
