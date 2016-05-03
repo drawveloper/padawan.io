@@ -11,9 +11,7 @@ const Hero = React.createClass({
         <p className="hero-subtitle">
           Finalmente, uma plataforma de ensino para o nosso século.
           Aprenda mais rápido do que nunca e receba ofertas de emprego das melhores empresas do mercado.
-          <br/>
           Qual vai ser o seu caminho? 
-          <br/>
           Estamos animados para descobrir.
         </p>
       </div>
