@@ -11,10 +11,18 @@ $deep-red: #c22557;
 $bright-pink: #ed5887;
 $dark-blue: #002f4b;
 $white: #fff;
+$black: #000;
 
 $small: 480px;
 $medium: 768px;
 $large: 992px;
+
+
+@mixin xsmall {
+  @media (max-width: #{$small - 1px}) {
+    @content;
+  }
+}
 
 @mixin small {
   @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {

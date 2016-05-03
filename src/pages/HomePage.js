@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import Header from '../components/Header'
-import Intro from '../components/Intro'
+import Hero from '../components/Hero'
+import SignUp from '../components/SignUp'
+import HowItWorks from '../components/HowItWorks'
+import Footer from '../components/Footer'
 import './HomePage.scss'
 
 const HomePage =  React.createClass({
@@ -14,9 +17,12 @@ const HomePage =  React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="home page">
         <Header/>
-        <Intro/>
+        <Hero/>
+        <SignUp/>
+        <HowItWorks/>
+        <Footer/>
       </div>
     )
   }

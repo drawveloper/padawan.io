@@ -13,8 +13,12 @@
   
   .navbar-right {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
+    
+    @include large {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   .navbar-item {

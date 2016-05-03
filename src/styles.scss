@@ -9,22 +9,21 @@
 
 html, 
 body,
-#app {
-  height: 100%;
+.app {
+  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
   background: linear-gradient(
-    to bottom right,
-    fade-out($dark-blue, .1),
-    fade-out($dark-purple, .3)
+    to bottom,
+    rgb(22,32,34) 70%,
+    fade-out($dark-purple, .1)
   );
   color: $light-grey;
-  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-smoothing: antialiased;
-  margin: 0 auto;
   text-rendering: optimizeLegibility;
 }
 
@@ -37,10 +36,41 @@ a {
   }
 }
 
+// TYPOGRAPHY
+
 h1 {
-  font-size: 3em;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+// PAGES
+
+.page {
+  display: flex;
+  flex-direction: column;
+  
+  > div {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  background-color: $purple_grey;
+  color: $white;
+  border-radius: 3px;
+  border: 0;
 }

@@ -1,0 +1,16 @@
+@import '../variables';
+
+.home {
+  background-image: url('../img/hero-1-medium.jpeg'), 
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0),
+      $black 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 600px;
+  @include xsmall {
+    background-size: auto 500px;
+  }
+}

@@ -3,7 +3,7 @@ import Header from '../components/Header'
 
 const AboutPage = () => {
     return (
-      <div>
+      <div className="page">
         <Header/>
         <h2>Sobre</h2>
       </div>
