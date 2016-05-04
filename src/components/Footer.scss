@@ -4,9 +4,22 @@
   display: flex;
   justify-content: center;
   margin-bottom: 0;
+
+  img {
+    display: inline;
+    width: 120px;
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
   small {
-    font-size: 0.8rem;
+    font-size: .7rem;
+    margin-left: 6px;
     color: $light-grey;
-    display: block;
+    display: inline;
   }
 }

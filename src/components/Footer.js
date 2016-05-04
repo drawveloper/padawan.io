@@ -6,7 +6,8 @@ const Footer = React.createClass({
     return (
       <div className="footer">
         <a href="mailto:oi@padawan.io">
-          <small>padawan.io 2016</small>
+          <img src="img/logo-title.png" alt="Padawan.io"/>
+          <small>® 2016</small>
         </a>
       </div>
     )
