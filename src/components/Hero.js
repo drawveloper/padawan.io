@@ -6,14 +6,15 @@ const Hero = React.createClass({
     return (
       <div className="hero">
         <div className="hero-container">
-          <h1 className="hero-title">
-            Torne-se um desenvolvedor de software profissional.
+          <h2 className="hero-title">
+            Domine as tecnologias da
+          </h2>
+          <h1 className="hero-title-vtex">
+            plataforma VTEX.
           </h1>
           <p className="hero-subtitle">
-            Finalmente, uma plataforma de ensino para o nosso século.
-            Aprenda mais rápido do que nunca e receba ofertas de emprego das melhores empresas do mercado.
-            Qual vai ser o seu caminho?
-            Estamos animados para descobrir.
+            Todo o poder ao seu alcance. <br/>
+            Conecte-se à comunidade Padawan.io e aprenda diretamente com especialistas.
           </p>
         </div>
       </div>

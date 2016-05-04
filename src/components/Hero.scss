@@ -16,39 +16,61 @@
   .hero-title {
     text-shadow: 1px 1px 2px black;
     margin-top: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  .hero-title-vtex {
+    text-shadow: 1px 1px 2px black;
+    margin-top: 0;
     font-size: 3.3rem;
     font-weight: 900;
   }
 
   .hero-subtitle {
-    text-shadow: 0 0 2px black;
+    text-shadow: 1px 1px 2px black;
     margin-top: 15px;
     font-size: 1.7rem;
-    line-height: 2.4rem;
+    line-height: 2.2rem;
+    max-width: 400px;
   }
 
   @include small {
-    margin: 67px 20px 0;
+    margin: 80px 20px 0;
     justify-content: flex-start;
     height: calc(#{$bg-small-height} - 100px);
+
     .hero-title {
-      font-size: 2.3rem;
+      font-size: 1.7rem;
       font-weight: 700;
     }
+
+    .hero-title-vtex {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
     .hero-subtitle {
       font-size: 1.249rem;
-      line-height: 1.5rem;
+      line-height: 1.8rem;
     }
   }
 
   @include medium {
-    margin: 67px 40px 0;
+    margin: 80px 40px 0;
     height: calc(#{$bg-medium-height} - 100px);
     justify-content: flex-start;
+
     .hero-title {
-      font-size: 2.7rem;
+      font-size: 2rem;
       font-weight: 700;
     }
+
+    .hero-title-vtex {
+      font-size: 2.7rem;
+      font-weight: 900;
+    }
+
     .hero-subtitle {
       font-size: 1.5rem;
       line-height: 1.9rem;
