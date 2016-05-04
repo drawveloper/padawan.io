@@ -17,27 +17,30 @@ $small: 480px;
 $medium: 768px;
 $large: 992px;
 
-
-@mixin xsmall {
+@mixin small {
   @media (max-width: #{$small - 1px}) {
     @content;
   }
 }
 
-@mixin small {
+@mixin medium {
   @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
     @content;
   }
 }
 
-@mixin medium {
-  @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
+@mixin large {
+  @media (min-width: #{$medium}) {
     @content;
   }
 }
 
-@mixin large {
+@mixin huge {
   @media (min-width: #{$large}) {
     @content;
   }
 }
+
+$bg-small-height: 500px;
+$bg-medium-height: 600px;
+$bg-large-height: 100vh;

@@ -7,10 +7,10 @@
   box-sizing: border-box;
 }
 
-html, 
+html,
 body,
 .app {
-  font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 16px 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -54,12 +54,21 @@ h4 {
   font-size: 1.3rem;
 }
 
+p, span, li {
+  font-size: 1.249rem;
+  line-height: 1.59rem;
+}
+
+small {
+  font-size: 0.9rem;
+}
+
 // PAGES
 
 .page {
   display: flex;
   flex-direction: column;
-  
+
   > div {
     padding: 20px;
     margin-bottom: 20px;
