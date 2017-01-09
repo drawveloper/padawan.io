@@ -7,14 +7,13 @@ const Hero = React.createClass({
       <div className="hero">
         <div className="hero-container">
           <h2 className="hero-title">
-            Domine as tecnologias da
+            Torne-se um desenvolvedor
           </h2>
           <h1 className="hero-title-vtex">
-            plataforma VTEX.
+            profissional.
           </h1>
           <p className="hero-subtitle">
-            Todo o poder ao seu alcance. <br/>
-            Conecte-se à comunidade Padawan.io e aprenda diretamente com especialistas.
+            Em breve...
           </p>
         </div>
       </div>

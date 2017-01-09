@@ -17,11 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgb(22,32,34) 50%,
-    fade-out($dark-purple, .1) 100%
-  );
+  background: #111;
   color: $light-grey;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
