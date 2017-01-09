@@ -12,7 +12,7 @@
     "remove-dist": "rimraf ./dist",
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist build:html",
-    "build": "npm run test && babel-node tools/build.js",
+    "build": "babel-node tools/build.js",
     "deploy": "npm run build && gh-pages-deploy"
   },
   "author": "Guilherme Rodrigues <gui@firstdoit.com>",
